@@ -2,34 +2,40 @@
 
 A fully responsive Tetris game built with vanilla JavaScript, featuring mobile-friendly touch controls, high score tracking, and classic Tetris gameplay.
 
-![Main Menu](https://github.com/user-attachments/assets/a9756853-beaa-48aa-ab80-11e18fb552ae)
+<a href="docs/screenshot-menu.png"><img src="docs/screenshot-menu.png" alt="Main Menu" style="display:block;max-width:300px;width:100%;height:auto;margin:0 auto;"></a>
 
 ## Features
 
 ### 🎯 Core Gameplay
+
 - **Complete Tetris mechanics**: All 7 classic Tetris pieces (I, O, T, S, Z, J, L)
 - **Line clearing**: Full rows are cleared with visual effects
 - **Scoring system**: Points for lines cleared, level progression, and hard drops
 - **Progressive difficulty**: Speed increases with each level
 - **Ghost piece**: Shows where the current piece will land
 
+<a href="docs/screenshot-game.png"><img src="docs/screenshot-game.png" alt="Game" style="display:block;max-width:300px;width:100%;height:auto;margin:0 auto;"></a>
+
 ### 📱 Mobile-Friendly Design
+
 - **Fully responsive**: Adapts to any screen size
 - **Touch controls**: Intuitive buttons for mobile devices
 - **Swipe gestures**: Alternative touch input method
 - **Optimized layout**: Mobile-first design approach
 
-![Mobile View](https://github.com/user-attachments/assets/bdc74586-9f77-4d75-a118-203f36bd7e31)
+<a href="https://github.com/user-attachments/assets/bdc74586-9f77-4d75-a118-203f36bd7e31"><img src="https://github.com/user-attachments/assets/bdc74586-9f77-4d75-a118-203f36bd7e31" alt="Mobile View" style="display:block;max-width:300px;width:100%;height:auto;margin:0 auto;"></a>
 
 ### 🏆 High Score System
+
 - **Local storage**: Scores are saved automatically
 - **Top 10 leaderboard**: Track your best performances
 - **Detailed stats**: Score, lines cleared, level, and date
 - **Persistent data**: Scores remain after browser restart
 
-![High Scores](https://github.com/user-attachments/assets/1c5d4179-05a3-4ffb-b4bd-2e314fcf6364)
+<a href="https://github.com/user-attachments/assets/1c5d4179-05a3-4ffb-b4bd-2e314fcf6364"><img src="https://github.com/user-attachments/assets/1c5d4179-05a3-4ffb-b4bd-2e314fcf6364" alt="High Scores" style="display:block;max-width:300px;width:100%;height:auto;margin:0 auto;"></a>
 
 ### 🎵 Audio & Visual Features
+
 - **Background music**: Classic Tetris theme (placeholder included)
 - **Visual effects**: Line clearing animations and piece shadows
 - **Modern UI**: Neon-style interface with smooth animations
@@ -38,6 +44,7 @@ A fully responsive Tetris game built with vanilla JavaScript, featuring mobile-f
 ## Controls
 
 ### Desktop (Keyboard)
+
 - **Arrow Keys**: Move and rotate pieces
   - `←` / `→`: Move left/right
   - `↓`: Soft drop (faster fall)
@@ -46,6 +53,7 @@ A fully responsive Tetris game built with vanilla JavaScript, featuring mobile-f
 - **P** or **Escape**: Pause/resume game
 
 ### Mobile (Touch)
+
 - **Touch buttons**: On-screen controls for all actions
 - **Swipe gestures**:
   - Swipe left/right: Move piece
@@ -60,6 +68,7 @@ A fully responsive Tetris game built with vanilla JavaScript, featuring mobile-f
 3. **Start playing** - no build process required!
 
 For local development with a web server:
+
 ```bash
 python3 -m http.server 8000
 # Then visit http://localhost:8000
@@ -90,9 +99,9 @@ tetris-js/
 
 ## Game Mechanics
 
-- **Line Scoring**: 
+- **Line Scoring**:
   - Single: 100 × level
-  - Double: 300 × level  
+  - Double: 300 × level
   - Triple: 500 × level
   - Tetris (4 lines): 800 × level
 - **Level Progression**: Every 10 lines cleared
@@ -119,6 +128,7 @@ tetris-js/
 ## Customization
 
 The game can be easily customized by modifying:
+
 - **Colors**: Edit piece colors in `src/core/pieces.js`
 - **Scoring**: Modify point values in `src/core/game.js`
 - **Styling**: Update CSS in `styles/main.css`
