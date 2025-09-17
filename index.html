@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris JS</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Menu Screen -->
+        <div id="menu-screen" class="screen active">
+            <div class="menu-container">
+                <h1 class="game-title">TETRIS</h1>
+                <div class="menu-buttons">
+                    <button id="play-btn" class="menu-btn">PLAY</button>
+                    <button id="highscores-btn" class="menu-btn">HIGH SCORES</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- High Scores Screen -->
+        <div id="highscores-screen" class="screen">
+            <div class="highscores-container">
+                <h2>HIGH SCORES</h2>
+                <div id="scores-list" class="scores-list"></div>
+                <button id="back-to-menu" class="menu-btn">BACK TO MENU</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="score-info">
+                        <div>Score: <span id="current-score">0</span></div>
+                        <div>Lines: <span id="lines-cleared">0</span></div>
+                        <div>Level: <span id="current-level">1</span></div>
+                    </div>
+                    <button id="pause-btn" class="control-btn">PAUSE</button>
+                </div>
+                
+                <div class="game-board-container">
+                    <canvas id="game-canvas" width="300" height="600"></canvas>
+                    
+                    <div class="game-sidebar">
+                        <div class="next-piece">
+                            <h4>NEXT</h4>
+                            <canvas id="next-canvas" width="80" height="80"></canvas>
+                        </div>
+                        
+                        <div class="mobile-controls">
+                            <div class="control-row">
+                                <button class="control-btn" id="rotate-btn">↻</button>
+                            </div>
+                            <div class="control-row">
+                                <button class="control-btn" id="left-btn">←</button>
+                                <button class="control-btn" id="down-btn">↓</button>
+                                <button class="control-btn" id="right-btn">→</button>
+                            </div>
+                            <div class="control-row">
+                                <button class="control-btn" id="drop-btn">DROP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="back-to-menu-game" class="menu-btn">BACK TO MENU</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="screen">
+            <div class="gameover-container">
+                <h2>GAME OVER</h2>
+                <div class="final-score">
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <p>Lines Cleared: <span id="final-lines">0</span></p>
+                </div>
+                <div class="gameover-buttons">
+                    <button id="play-again-btn" class="menu-btn">PLAY AGAIN</button>
+                    <button id="menu-btn-gameover" class="menu-btn">MAIN MENU</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="tetris-music" loop>
+        <source src="assets/tetris-theme.mp3" type="audio/mpeg">
+        <source src="assets/tetris-theme.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="src/core/pieces.js"></script>
+    <script src="src/core/board.js"></script>
+    <script src="src/core/game.js"></script>
+    <script src="src/storage/highscores.js"></script>
+    <script src="src/ui/renderer.js"></script>
+    <script src="src/ui/controls.js"></script>
+    <script src="src/ui/screens.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>
